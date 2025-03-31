@@ -103,7 +103,7 @@ const Package = () => {
                   {pkg.reviews} reviews
                 </span>
               </div>
-              <h2 className="text-xl font-bold text-gray-800">{pkg.name}</h2>
+              <h2 className="text-xl font-bold text-[#003233]">{pkg.name}</h2>
               <div className="text-lg font-semibold flex gap-2 items-center">
                 <span className="text-[#52996A]">PHP {pkg.price}</span>
                 <span className="text-gray-500 text-sm">/ Per person</span>
