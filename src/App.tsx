@@ -8,6 +8,7 @@ import Banner2 from "./components/Banner2";
 import WhyChoose from "./pages/WhyChoose";
 import Subscribe from "./components/Subscribe";
 import Footer from "./components/Footer";
+import Credits from "./components/Credits";
 
 const App = () => {
   return (
@@ -21,6 +22,7 @@ const App = () => {
       <WhyChoose />
       <Subscribe />
       <Footer />
+      <Credits />
     </>
   );
 };
