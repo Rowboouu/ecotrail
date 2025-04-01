@@ -5,6 +5,12 @@ import Instagram from "../assets/images/instagram.png";
 import Whatsapp from "../assets/images/whatsapp.png";
 
 const Footer = () => {
+  const scrollToSection = (id: string) => {
+    const section = document.getElementById(id);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
   const links = [
     [
       "About Us",
@@ -33,9 +39,12 @@ const Footer = () => {
     <div className="w-screen h-[412px] bg-[#003233] text-white font-[Inter] flex items-center justify-center">
       <div className="w-[75%] h-[50%] grid grid-cols-6 items-center justify-center">
         <div className="h-full col-span-2 flex flex-col justify-between items-center">
-          <div className="w-full flex items-center gap-4">
+          <div
+            className="w-full flex items-center gap-4 cursor-pointer"
+            onClick={() => scrollToSection("landing-page")}
+          >
             <img src={Logo} alt="" className="h-10" />
-            <div className="text-white text-lg font-semibold font-[Inter] cursor-pointer">
+            <div className="text-white text-lg font-semibold font-[Inter]">
               EcoTrail
             </div>
           </div>
@@ -79,9 +88,9 @@ const Footer = () => {
         <div className="grid grid-rows-5 h-full">
           <div className="font-bold">Connect With Us</div>
           <div className="flex flex-row w-full gap-4">
-            <img src={Facebook} alt="" className="h-6" />
-            <img src={Instagram} alt="" className="h-6" />
-            <img src={Whatsapp} alt="" className="h-6" />
+            <img src={Facebook} alt="" className="h-6 cursor-pointer" />
+            <img src={Instagram} alt="" className="h-6 cursor-pointer" />
+            <img src={Whatsapp} alt="" className="h-6 cursor-pointer" />
           </div>
         </div>
       </div>
