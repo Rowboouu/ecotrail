@@ -19,7 +19,12 @@ const Navbar = () => {
           </div>
         </div>
         <div className="flex text-white font-light gap-x-8 font-[Inter]">
-          <div className="cursor-pointer">Home</div>
+          <div
+            className="cursor-pointer"
+            onClick={() => scrollToSection("landing-page")}
+          >
+            Home
+          </div>
           <div
             className="cursor-pointer"
             onClick={() => scrollToSection("about-us")}
@@ -32,7 +37,12 @@ const Navbar = () => {
           >
             Destinations
           </div>
-          <div className="cursor-pointer">Contact</div>
+          <div
+            className="cursor-pointer"
+            onClick={() => scrollToSection("subscribe")}
+          >
+            Contact
+          </div>
         </div>
         <button className="bg-[#003233] text-white font-semibold py-2 px-6 rounded-4xl cursor-pointer">
           Book Now

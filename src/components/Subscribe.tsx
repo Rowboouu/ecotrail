@@ -5,6 +5,7 @@ import { Mail } from "lucide-react";
 const Subscribe = () => {
   return (
     <div
+      id="subscribe"
       className="w-screen h-[810px] bg-cover bg-center text-white font-[Inter] flex items-center justify-center"
       style={{ backgroundImage: `url(${Mountain})` }}
     >
