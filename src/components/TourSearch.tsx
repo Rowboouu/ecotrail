@@ -1,6 +1,11 @@
 import React from "react";
 import { format } from "date-fns";
 import { Calendar as CalendarIcon, ChevronDown } from "lucide-react";
+import { MapPin } from "lucide-react";
+import { Sailboat } from "lucide-react";
+import { Mountain } from "lucide-react";
+import { TentTree } from "lucide-react";
+import { TramFront } from "lucide-react";
 
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
@@ -14,12 +19,14 @@ import {
 const TourSearch = () => {
   const [startDate, setStartDate] = React.useState<Date>();
   const [endDate, setEndDate] = React.useState<Date>();
-  const [selectedTourType, setSelectedTourType] = React.useState<string | null>(
-    null
-  );
-  const [selectedDestination, setSelectedDestination] = React.useState<
-    string | null
-  >(null);
+  const [selectedTourType, setSelectedTourType] = React.useState<{
+    name: string;
+    icon: React.ElementType;
+  } | null>(null);
+  const [selectedDestination, setSelectedDestination] = React.useState<{
+    name: string;
+    icon: React.ElementType;
+  } | null>(null);
 
   return (
     <div className="h-[25%] w-full flex items-center justify-center font-[Inter]">
@@ -35,23 +42,60 @@ const TourSearch = () => {
                     !selectedTourType && "text-muted-foreground"
                   )}
                 >
-                  {selectedTourType || "Tour Type"}
+                  {selectedTourType ? (
+                    <div className="flex items-center gap-2">
+                      <selectedTourType.icon className="h-5 w-5 text-gray-500" />
+                      {selectedTourType.name}
+                    </div>
+                  ) : (
+                    "Tour Type"
+                  )}
                   <ChevronDown className="h-4 w-4" />
                 </Button>
               </PopoverTrigger>
               <PopoverContent className="w-auto p-2">
-                <ul className="list-none m-0 p-0 font-[Inter]">
-                  {["Adventure", "Relaxation", "Cultural", "Nature"].map(
-                    (type) => (
-                      <li
-                        key={type}
-                        className="cursor-pointer p-2 hover:bg-gray-100"
-                        onClick={() => setSelectedTourType(type)}
-                      >
-                        {type}
-                      </li>
-                    )
-                  )}
+                <ul className="list-none m-0 font-[Inter] divide-y-2">
+                  {[
+                    {
+                      name: "Island Hopping",
+                      type: "Nature/Water",
+                      icon: Sailboat,
+                    },
+                    {
+                      name: "Hiking / Escapade",
+                      type: "Nature",
+                      icon: Mountain,
+                    },
+                    {
+                      name: "Camping / SightSeeing",
+                      type: "Nature",
+                      icon: TentTree,
+                    },
+                    {
+                      name: "SightSeeing",
+                      type: "Tourist Attractions",
+                      icon: TramFront,
+                    },
+                  ].map((tour) => (
+                    <li
+                      key={tour.name}
+                      className="cursor-pointer py-2 pl-2 pr-20 hover:bg-gray-100 flex items-center gap-2"
+                      onClick={() =>
+                        setSelectedTourType({
+                          name: tour.name,
+                          icon: tour.icon,
+                        })
+                      }
+                    >
+                      <tour.icon className="h-5 w-5 text-gray-500" />
+                      <div className="flex flex-col">
+                        <span className="font-medium">{tour.name}</span>
+                        <span className="text-sm text-gray-500">
+                          {tour.type}
+                        </span>
+                      </div>
+                    </li>
+                  ))}
                 </ul>
               </PopoverContent>
             </Popover>
@@ -66,23 +110,44 @@ const TourSearch = () => {
                     !selectedDestination && "text-muted-foreground"
                   )}
                 >
-                  {selectedDestination || "Destination"}
+                  {selectedDestination ? (
+                    <div className="flex items-center gap-2">
+                      <MapPin className="h-5 w-5 text-gray-500" />
+                      {selectedDestination.name}
+                    </div>
+                  ) : (
+                    "Destination"
+                  )}
                   <ChevronDown className="h-4 w-4" />
                 </Button>
               </PopoverTrigger>
               <PopoverContent className="w-auto p-2">
-                <ul className="list-none m-0 p-0 font-[Inter]">
-                  {["Familia", "USTP", "Princetech", "SM Uptown"].map(
-                    (destination) => (
-                      <li
-                        key={destination}
-                        className="cursor-pointer p-2 hover:bg-gray-100"
-                        onClick={() => setSelectedDestination(destination)}
-                      >
-                        {destination}
-                      </li>
-                    )
-                  )}
+                <ul className="list-none m-0 font-[Inter] divide-y-2">
+                  {[
+                    { name: "Davao City", country: "Philippines" },
+                    { name: "Cebu City", country: "Philippines" },
+                    { name: "Manila", country: "Philippines" },
+                    { name: "Baguio City", country: "Philippines" },
+                  ].map((destination) => (
+                    <li
+                      key={destination.name}
+                      className="cursor-pointer py-2 pl-2 pr-20 hover:bg-gray-100 flex items-center gap-2"
+                      onClick={() =>
+                        setSelectedDestination({
+                          name: destination.name,
+                          icon: MapPin,
+                        })
+                      }
+                    >
+                      <MapPin className="h-5 w-5 text-gray-500" />
+                      <div className="flex flex-col">
+                        <span className="font-medium">{destination.name}</span>
+                        <span className="text-sm text-gray-500">
+                          {destination.country}
+                        </span>
+                      </div>
+                    </li>
+                  ))}
                 </ul>
               </PopoverContent>
             </Popover>
