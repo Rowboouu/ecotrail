@@ -7,26 +7,28 @@ const LandingPage = () => {
   return (
     <div
       id="landing-page"
-      className="w-screen h-screen bg-cover bg-center"
+      className="w-full h-screen bg-cover bg-center"
       style={{ backgroundImage: `url(${welcomeImage})` }}
     >
-      <Navbar />
-      <div className="grid grid-cols-5 w-full h-[65%] font-[Inter]">
-        <div className="col-span-2"></div>
-        <div className="col-span-3 h-full flex items-center just">
-          <div className="flex flex-col gap-6">
-            <div className="font-bold text-4xl text-[#003233]">
+      {/* Make Navbar a running header */}
+      <div className="fixed top-0 left-0 w-full z-20">
+        <Navbar />
+      </div>
+      <div className="grid grid-cols-1 md:grid-cols-5 w-full md:h-[75%] h-[65%] font-[Inter] px-4 md:px-0 pt-16">
+        <div className="hidden md:block col-span-2"></div>
+        <div className="col-span-1 md:col-span-3 h-full flex items-center">
+          <div className="flex flex-col gap-6 text-center md:text-left">
+            <div className="font-bold text-3xl md:text-4xl text-[#003233]">
               Discover Sustainable Travel
-              <br />
-              Adventures with EcoTrail
+              <br className="hidden md:block" /> Adventures with EcoTrail
             </div>
-            <div className="font-normal text-lg text-[#003233]">
+            <div className="font-normal text-sm md:text-lg text-[#003233]">
               Explore eco-friendly destinations and make an impact.
-              <br />
+              <br className="hidden md:block" />
               Travel responsibly, leave a positive footprint with EcoTrail!
             </div>
             <div className="mt-2">
-              <button className="bg-[#003233] text-white font-semibold py-4 px-12 rounded-4xl cursor-pointer">
+              <button className="bg-[#003233] text-white font-semibold py-3 px-8 md:py-4 md:px-12 rounded-4xl cursor-pointer hover:bg-[#005f4f] transition-colors duration-300">
                 Get Started
               </button>
             </div>

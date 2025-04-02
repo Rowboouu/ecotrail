@@ -28,14 +28,14 @@ const WhyChoose = () => {
   return (
     <div
       id="why-choose"
-      className="w-screen h-screen flex items-center justify-center font-[Inter]"
+      className="w-full min-h-screen flex items-center justify-center font-[Inter] px-4 mb-4"
     >
-      <div className="w-[75%] flex flex-col gap-10">
-        <div className="grid grid-cols-2">
-          <div className="text-[#003233] text-4xl font-bold">
+      <div className="w-full max-w-[1200px] flex flex-col gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="text-[#003233] text-3xl md:text-4xl font-bold">
             Why Choose Eco Trail?
           </div>
-          <div className="text-[#636A66] text-lg">
+          <div className="text-[#636A66] text-base md:text-lg">
             At <span className="font-bold">EcoTrail,</span> we create
             unforgettable travel experiences that protect and preserve nature.
             Our eco-friendly tours take you deep into breathtaking landscapes
@@ -46,18 +46,23 @@ const WhyChoose = () => {
             <span className="font-bold">ethically</span>.
           </div>
         </div>
-        <div className="grid grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {features.map((feature, index) => (
-            <div key={index} className="flex flex-col gap-2 p-4 items-start">
+            <div
+              key={index}
+              className="flex flex-col gap-4 p-4 items-start bg-white shadow-md rounded-lg"
+            >
               <img
                 src={feature.img}
                 alt=""
-                className="h-20 object-scale-down"
+                className="h-16 md:h-20 object-scale-down"
               />
-              <span className="text-[#003233] text-2xl font-bold">
+              <span className="text-[#003233] text-xl md:text-2xl font-bold">
                 {feature.title}
               </span>
-              <span className="text-[#636A66]">{feature.description}</span>
+              <span className="text-[#636A66] text-sm md:text-base">
+                {feature.description}
+              </span>
             </div>
           ))}
         </div>

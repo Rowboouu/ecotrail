@@ -22,9 +22,9 @@ const TourSearch = () => {
   >(null);
 
   return (
-    <div className="h-[25%] flex items-center justify-center font-[Inter]">
+    <div className="h-[25%] w-full flex items-center justify-center font-[Inter]">
       <div className="bg-white/40 p-4 w-[70%]">
-        <div className="grid grid-cols-5 bg-white">
+        <div className="grid grid-cols-2 md:grid-cols-5 bg-white gap-4">
           <div className="flex items-center justify-center">
             <Popover>
               <PopoverTrigger asChild className="w-full h-full">
@@ -145,7 +145,7 @@ const TourSearch = () => {
               </PopoverContent>
             </Popover>
           </div>
-          <button className="bg-[#003233] text-white font-semibold py-4 px-6 cursor-pointer">
+          <button className="bg-[#003233] text-white font-semibold py-4 px-6 cursor-pointer col-span-2 md:col-span-1 hover:bg-[#005f4f] transition-colors duration-300">
             FIND NOW
           </button>
         </div>

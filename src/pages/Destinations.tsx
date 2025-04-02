@@ -74,16 +74,16 @@ const Destinations = () => {
   return (
     <div
       id="destinations"
-      className="w-screen h-screen flex flex-col items-center justify-center font-[Inter] gap-4"
+      className="w-full min-h-screen flex flex-col items-center justify-center font-[Inter] gap-4 px-4"
     >
-      <div className="w-[75%] font-bold text-4xl text-[#003233] items-start">
-        <span className="text-base font-normal tracking-[10px]">
+      <div className="w-full max-w-6xl font-bold text-4xl text-[#003233] items-start text-center md:text-left">
+        <span className="text-base font-normal md:tracking-[10px] tracking-[8px]">
           CHOOSE YOUR DESTINATION
         </span>
         <br />
         TOP ECO-MAZING <span className="text-[#52996A]">DESTINATIONS</span>
       </div>
-      <div className="grid grid-cols-3 gap-8 w-[75%] items-center justify-center">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 w-full max-w-6xl items-center justify-center">
         {packages.map((pkg) => (
           <div
             key={pkg.id}
@@ -93,7 +93,7 @@ const Destinations = () => {
               <img
                 src={pkg.image}
                 alt="Package"
-                className="w-auto h-64 rounded-t-md object-cover hover:scale-105 transition-transform duration-300 cursor-pointer"
+                className="w-full h-full rounded-t-md object-cover hover:scale-105 transition-transform duration-300 cursor-pointer"
               />
             </div>
             <div className="p-6 gap-2 flex flex-col items-start justify-center">
@@ -108,7 +108,7 @@ const Destinations = () => {
                 <span className="text-[#52996A]">PHP {pkg.price}</span>
                 <span className="text-gray-500 text-sm">/ Per person</span>
               </div>
-              <div className="bg-gray-100 p-2 my-2 rounded-md text-sm text-gray-500 flex items-center gap-2 font-semibold">
+              <div className="bg-gray-100 p-2 my-2 rounded-md text-sm text-gray-500 flex flex-wrap items-center gap-2 font-semibold">
                 <span className="flex items-center gap-1">
                   <Clock8 className="w-4 h-auto" />
                   {pkg.daysPosted}
@@ -119,7 +119,7 @@ const Destinations = () => {
                 </span>
               </div>
               <p className="text-gray-500 text-sm">{pkg.description}</p>
-              <button className="mt-4 px-4 py-2 w-full bg-[#A4CAB1] text-white rounded-lg hover:bg-[#52996A] cursor-pointer">
+              <button className="mt-4 px-4 py-2 w-full bg-[#A4CAB1] text-white rounded-lg hover:bg-[#52996A] cursor-pointer transition-colors duration-300">
                 See Details
               </button>
             </div>

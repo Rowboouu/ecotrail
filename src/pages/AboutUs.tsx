@@ -5,19 +5,19 @@ const AboutUs = () => {
   return (
     <div
       id="about-us"
-      className="w-screen h-screen flex items-center justify-center font-[Inter]"
+      className="w-full min-h-screen flex items-center justify-center font-[Inter] px-4"
     >
-      <div className="grid grid-cols-2 w-[75%] items-center justify-center">
-        <div className="flex flex-col gap-6 h-full items-start justify-center">
-          <div className="font-bold text-4xl text-[#003233]">
-            <span className="text-base font-normal tracking-[10px]">
+      <div className="flex flex-row w-full md:w-[75%] items-center justify-between gap-8">
+        <div className="flex flex-col gap-6 h-full items-start justify-center w-1/2">
+          <div className="font-bold text-3xl md:text-4xl text-[#003233]">
+            <span className="text-sm md:text-base font-normal tracking-[5px] md:tracking-[10px]">
               WITH ECOTRAIL,
             </span>
             <br />
             DISCOVER THE WORLD,
             <br /> <span className="text-[#52996A]">SUSTAINABLY</span>
           </div>
-          <div className="font-normal text-lg text-[#636A66] w-[95%] text-left">
+          <div className="font-normal text-base md:text-lg text-[#636A66] w-full text-left">
             <span className="font-bold">EcoTrail</span> is more than just a
             travel agency—we are a movement dedicated to sustainable tourism. We
             believe that exploring the world should go hand in hand with
@@ -26,12 +26,18 @@ const AboutUs = () => {
             cultures thrive for generations to come.
           </div>
           <div className="mt-4">
-            <button className="bg-[#003233] text-white font-semibold py-4 px-12 rounded-4xl cursor-pointer">
+            <button className="bg-[#003233] text-white font-semibold py-3 px-8 md:py-4 md:px-12 rounded-4xl cursor-pointer hover:bg-[#005f4f] transition-colors duration-300">
               About Us
             </button>
           </div>
         </div>
-        <img src={islandImage} alt="back-view-island-outdoors-tree-standing" />
+        <div className="w-1/2 h-full">
+          <img
+            src={islandImage}
+            alt="back-view-island-outdoors-tree-standing"
+            className="w-full h-auto object-cover"
+          />
+        </div>
       </div>
     </div>
   );

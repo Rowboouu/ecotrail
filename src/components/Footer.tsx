@@ -36,11 +36,11 @@ const Footer = () => {
   ];
 
   return (
-    <div className="w-screen h-[412px] bg-[#003233] text-white font-[Inter] flex items-center justify-center">
-      <div className="w-[75%] h-[50%] grid grid-cols-6 items-center justify-center">
-        <div className="h-full col-span-2 flex flex-col justify-between items-center">
+    <div className="w-full bg-[#003233] text-white font-[Inter] flex items-center justify-center py-8">
+      <div className="w-[90%] lg:w-[75%] grid grid-cols-2 2xl:grid-cols-6 gap-8 items-center">
+        <div className="col-span-2 flex flex-col justify-between items-center text-center lg:text-left">
           <div
-            className="w-full flex items-center gap-4 cursor-pointer"
+            className="w-full flex items-center gap-4 cursor-pointer justify-center lg:justify-start"
             onClick={() => scrollToSection("landing-page")}
           >
             <img src={Logo} alt="" className="h-10" />
@@ -48,7 +48,7 @@ const Footer = () => {
               EcoTrail
             </div>
           </div>
-          <div className="w-full flex flex-col text-white/50 text-xs">
+          <div className="w-full flex flex-col text-white/50 text-xs mt-4 lg:mt-0">
             <span>@2025 EcoTrail. All rights reserved</span>
             <span>
               <a href="" className="underline underline-offset-3">
@@ -64,12 +64,9 @@ const Footer = () => {
         {links.map((column, index) => (
           <div
             key={index}
-            className="flex flex-col gap-2 h-full justify-between col-span-1"
+            className="flex flex-col gap-2 justify-between text-center lg:text-left"
           >
             {column.map((link, linkIndex) => {
-              {
-                /*const href = `/${link.toLowerCase().replace(/\s+/g, "-")}`;*/
-              }
               const href = "";
               return (
                 <a
@@ -85,9 +82,9 @@ const Footer = () => {
             })}
           </div>
         ))}
-        <div className="grid grid-rows-5 h-full">
-          <div className="font-bold">Connect With Us</div>
-          <div className="flex flex-row w-full gap-4">
+        <div className="flex flex-col items-center lg:items-start">
+          <div className="font-bold mb-2">Connect With Us</div>
+          <div className="flex flex-row w-full gap-4 justify-center lg:justify-start">
             <img src={Facebook} alt="" className="h-6 cursor-pointer" />
             <img src={Instagram} alt="" className="h-6 cursor-pointer" />
             <img src={Whatsapp} alt="" className="h-6 cursor-pointer" />
