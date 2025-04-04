@@ -74,16 +74,16 @@ const Destinations = () => {
   return (
     <div
       id="destinations"
-      className="w-full min-h-screen flex flex-col items-center justify-center font-[Inter] gap-4 px-4"
+      className="w-full min-h-screen flex flex-col items-center justify-center font-[Inter] gap-4 px-8 md:px-0"
     >
-      <div className="w-full max-w-6xl font-bold text-4xl text-[#003233] items-start text-center md:text-left">
+      <div className="w-full md:w-[75%] font-bold text-4xl text-[#003233] items-start text-center md:text-left">
         <span className="text-base font-normal md:tracking-[10px] tracking-[8px]">
           CHOOSE YOUR DESTINATION
         </span>
         <br />
         TOP ECO-MAZING <span className="text-[#52996A]">DESTINATIONS</span>
       </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 w-full max-w-6xl items-center justify-center">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full md:w-[75%] items-center justify-center">
         {packages.map((pkg) => (
           <div
             key={pkg.id}

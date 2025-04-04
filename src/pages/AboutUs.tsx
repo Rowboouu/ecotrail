@@ -5,10 +5,10 @@ const AboutUs = () => {
   return (
     <div
       id="about-us"
-      className="w-full min-h-screen flex items-center justify-center font-[Inter] px-4"
+      className="w-full h-[927px] flex items-center justify-center font-[Inter] md:px-0 px-8"
     >
-      <div className="flex flex-row w-full md:w-[75%] items-center justify-between gap-8">
-        <div className="flex flex-col gap-6 h-full items-start justify-center w-1/2">
+      <div className="flex flex-row w-full md:w-[75%] h-[735px] items-center justify-between gap-8">
+        <div className="flex flex-col gap-6 items-start justify-center w-1/2 h-[543px]">
           <div className="font-bold text-3xl md:text-4xl text-[#003233]">
             <span className="text-sm md:text-base font-normal tracking-[5px] md:tracking-[10px]">
               WITH ECOTRAIL,
@@ -31,11 +31,11 @@ const AboutUs = () => {
             </button>
           </div>
         </div>
-        <div className="w-1/2 h-full">
+        <div className="h-[543px] w-1/2">
           <img
             src={islandImage}
             alt="back-view-island-outdoors-tree-standing"
-            className="w-full h-auto object-cover"
+            className="h-full object-cover rounded-4xl"
           />
         </div>
       </div>

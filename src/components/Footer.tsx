@@ -36,8 +36,8 @@ const Footer = () => {
   ];
 
   return (
-    <div className="w-full bg-[#003233] text-white font-[Inter] flex items-center justify-center py-8">
-      <div className="w-[90%] xl:w-[75%] grid grid-cols-2 2xl:grid-cols-6 gap-8 items-center">
+    <div className="w-full bg-[#003233] text-white font-[Inter] flex items-center justify-center py-8 px-8 md:px-0">
+      <div className="w-full xl:w-[75%] grid grid-cols-2 2xl:grid-cols-6 gap-8 items-center">
         <div className="col-span-2 h-full flex flex-col justify-between items-center text-center 2xl:text-left">
           <div
             className="w-full flex items-center gap-4 cursor-pointer justify-center 2xl:justify-start"

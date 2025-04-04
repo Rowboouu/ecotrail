@@ -29,8 +29,8 @@ const TourSearch = () => {
   } | null>(null);
 
   return (
-    <div className="h-[25%] w-full flex items-center justify-center font-[Inter]">
-      <div className="bg-white/40 p-4 w-[70%]">
+    <div className="h-[25%] w-full flex items-center justify-center font-[Inter] md:px-0 px-8">
+      <div className="bg-white/40 p-4 w-full md:w-[75%]">
         <div className="grid grid-cols-2 md:grid-cols-5 bg-white gap-4">
           <div className="flex items-center justify-center">
             <Popover>

@@ -28,9 +28,9 @@ const WhyChoose = () => {
   return (
     <div
       id="why-choose"
-      className="w-full min-h-screen flex items-center justify-center font-[Inter] px-4 mb-4"
+      className="w-full min-h-screen flex items-center justify-center font-[Inter] px-8 md:px-0 mb-4"
     >
-      <div className="w-full max-w-[1200px] flex flex-col gap-10">
+      <div className="w-full md:w-[75%] flex flex-col gap-10">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div className="text-[#003233] text-3xl md:text-4xl font-bold">
             Why Choose Eco Trail?

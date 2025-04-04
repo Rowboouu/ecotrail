@@ -14,7 +14,7 @@ const LandingPage = () => {
       <div className="fixed top-0 left-0 w-full z-20">
         <Navbar />
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-5 w-full md:h-[75%] h-[65%] font-[Inter] px-4 md:px-0 pt-16">
+      <div className="grid grid-cols-1 md:grid-cols-5 w-full md:h-[75%] h-[65%] font-[Inter] px-8 md:px-0 pt-16">
         <div className="hidden md:block col-span-2"></div>
         <div className="col-span-1 md:col-span-3 h-full flex items-center">
           <div className="flex flex-col gap-6 text-center md:text-left">

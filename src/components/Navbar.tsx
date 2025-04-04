@@ -28,7 +28,7 @@ const Navbar = () => {
         isTransparent ? "bg-transparent" : "bg-[#003233]"
       }`}
     >
-      <nav className="flex justify-between items-center px-4 py-3 lg:mx-[10%] tracking-wider">
+      <nav className="flex justify-between items-center px-8 py-3 lg:mx-[10%] tracking-wider">
         <div
           className="flex items-center gap-2 cursor-pointer"
           onClick={() => scrollToSection("landing-page")}
@@ -64,7 +64,7 @@ const Navbar = () => {
             Contact
           </div>
         </div>
-        <button className="hidden lg:block bg-[#003233] text-white font-semibold py-2 px-6 rounded-4xl cursor-pointer hover:bg-[#005f4f] transition-colors duration-300">
+        <button className="hidden lg:block bg-[#003233] text-white font-semibold py-2 px-8 rounded-4xl cursor-pointer hover:bg-[#005f4f] transition-colors duration-300">
           Book Now
         </button>
         <div
@@ -131,7 +131,7 @@ const Navbar = () => {
           Contact
         </div>
         <button
-          className="bg-white text-[#003233] font-semibold py-2 px-6 rounded-4xl cursor-pointer hover:bg-gray-400 transition-colors duration-300"
+          className="bg-white text-[#003233] font-semibold py-2 px-8 rounded-4xl cursor-pointer hover:bg-gray-400 transition-colors duration-300"
           onClick={() => setIsMobileMenuOpen(false)}
         >
           Book Now
